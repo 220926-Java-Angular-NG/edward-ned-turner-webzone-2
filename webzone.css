@@ -1,24 +1,75 @@
 body {
     /* Set "my-sec-counter" to 0 */
     counter-reset: my-sec-counter;
+    background-color: rgb(248, 238, 219);
   }
 
+  .blonkus{
+    background-color: rgb(156, 129, 79);
+  }
+
+  h1{
+    background-color: rgb(202, 197, 184);
+    /* width: 500px; */
+  }
+
+ h2, h3, h4, h5 {
+    text-indent: 50px;
+    /* width: 500px; */
+    background-color: beige;
+  }
+
+  h2 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
     
   h3::before {
     /* Increment "my-sec-counter" by 1 */
     counter-increment: my-sec-counter;
-    content: "No " counter(my-sec-counter) ". ";
+    content: "Compliment " counter(my-sec-counter) ". ";
   }
     
   h4::before {
-    /* Increment "my-sec-counter" by 1 */
     counter-increment: my-sec-counter;
-    content: "No " counter(my-sec-counter) ". ";
+    content: "Compliment " counter(my-sec-counter) ". ";
+  }    
+  h5::before {
+    counter-increment: my-sec-counter;
+    content: "Compliment " counter(my-sec-counter) ". ";
   }
     
   h2::before {
-    /* Increment "my-sec-counter" by 1 */
     counter-increment: my-sec-counter;
-    content: "No " counter(my-sec-counter) ". ";
+    content: "Compliment " counter(my-sec-counter) ". ";
   }
     
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Create two equal columns that floats next to each other */
+  .column1, .column2 {
+    float: left;
+    padding: 10px;
+  }
+
+  .column1 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+  .column2 {
+    width: 60%;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  #subTitle{
+
+  }

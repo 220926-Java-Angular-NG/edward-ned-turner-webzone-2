@@ -1,6 +1,8 @@
 //access our div with the id 'main'
 //we're going to add a header to the div
 
+'use strict';
+
 let mainDiv = document.getElementById("main");
 
 //creating our header/new element
@@ -9,9 +11,7 @@ header.classList.add("main");
 
 let count = 0;
 
-setInterval
-
-header.innerHTML = `We currently have ${count} submissions`;
+// header.innerHTML = `We currently have ${count} submissions`;
 
 //add this new header element to my div with the id 'main'
  mainDiv.appendChild(header);
@@ -49,10 +49,12 @@ submitButton.addEventListener('click', (event)=>{
     
     let newItem;
 
-    if(count < 6){
+    if(count < 8){
     newItem = document.createElement('h3');
-    } else if (count >= 6 && count < 10){
+    } else if (count >= 8 && count < 9){
         newItem = document.createElement('h4');
+    } else if (count >= 9 && count < 11){
+        newItem = document.createElement('h5');
     } else{
         newItem = document.createElement('h2');
     } 
@@ -72,22 +74,29 @@ submitButton.addEventListener('click', (event)=>{
     textInput.value = '';
     // textInput2.value = '';
 
-if(count < 5){
+if(count < 6){
     console.log("Submission " + count + " made.");
-} else if (count = 6){
+} else if (count <= 6){
     console.log("Dang baby! " + count + " submissions? Someone's opinionated!");
-} else if (count = 7){
+} else if (count <= 7){
     console.log("Geeze! " + count + "?? You're really going at it!");
-} else if (count = 8){
-    console.log("Good Gravy. " + count + " submissions? Calm down, babe.");
-} else if (count = 9){
-    console.log(count + ". Cheese Louise. I'm gonna run out of funny things to say!");
-} else if (count = 10){
+} else if (count <= 8){
+    console.log("Good Gravy. " + count + " submissions? Calm down, babe. I'm getting tired");
+} else if (count <= 9){
+    console.log(count + ". Cheese Louise. My arms hurt!");
+} else if (count <= 10){
     console.log("Fine. " + count + ". I'm going on break. The robit can handle this. You want anything?");
 } else{
-    console.log("ROBOT SAYS: " + count + " YOU MUST HAVE A PERSISTENT STYLE.");
+    console.log("ROBOT SAYS: " + count + " SUBMISSIONS. YOU MUST HAVE A PERSISTENT STYLE.");
 } 
     
+if(count <= 1){
+    header.innerHTML = `Totabulous Wonkspire has received ${count} compliment`;
+
+}else{
+    header.innerHTML = `Totabulous Wonkspire has received ${count} compliments`;
+
+}
 
 })
 
