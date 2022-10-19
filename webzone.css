@@ -1,0 +1,24 @@
+body {
+    /* Set "my-sec-counter" to 0 */
+    counter-reset: my-sec-counter;
+  }
+
+    
+  h3::before {
+    /* Increment "my-sec-counter" by 1 */
+    counter-increment: my-sec-counter;
+    content: "No " counter(my-sec-counter) ". ";
+  }
+    
+  h4::before {
+    /* Increment "my-sec-counter" by 1 */
+    counter-increment: my-sec-counter;
+    content: "No " counter(my-sec-counter) ". ";
+  }
+    
+  h2::before {
+    /* Increment "my-sec-counter" by 1 */
+    counter-increment: my-sec-counter;
+    content: "No " counter(my-sec-counter) ". ";
+  }
+    
